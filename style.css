@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* First Page */
+.home {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.box h1 {
+    font-size: 45px;
+    color: #ff416c;
+}
+
+.box p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff416c;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #222;
+    transform: scale(1.1);
+}
+
+/* Birthday Page */
+.birthday {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    overflow-x: hidden;
+    padding: 40px;
+}
+
+.wish-card {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    animation: pop 1s ease;
+}
+
+.wish-card img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.wish-card h1 {
+    color: #ff006e;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.wish-card p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.cake {
+    margin-top: 25px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.wish-card h2 {
+    color: #ff4b2b;
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+/* Blast Animation */
+.confetti::before {
+    content: "🎉 🎊 🎈 🎂 🎁 ✨ 🥳";
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    font-size: 35px;
+    animation: fall 4s linear infinite;
+    z-index: 10;
+    text-align: center;
+}
+
+.confetti::after {
+    content: "🎊 🎁 🎉 ✨ 🎈 🥳 🎂";
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    font-size: 35px;
+    animation: fall 5s linear infinite;
+    z-index: 10;
+    text-align: center;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
